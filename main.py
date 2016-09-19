@@ -88,13 +88,21 @@ def print_results(people):
 
 if __name__ == "__main__":
 	if len(sys.argv) == 2:
-		people = read(sys.argv[1])
+		try:
+			people = read(sys.argv[1])
+		except IOError:
+			print "Could not find database " + str(sys.argv[1])
+			sys.exit(-1)
 		people_s = shuffle(people)
 		result = None
 		while not result:
 			result = generate_rooms(people_s)
 			people_s = shuffle(people)
-		write(result, sys.argv[1])
+		try:
+			write(result, sys.argv[1])
+		except IOError:
+			print "Could not find database " + str(sys.argv[1])
+			sys.exit(-1)
 		print_results(result)
 		sys.exit(1)
 		
