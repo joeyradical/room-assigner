@@ -1,6 +1,6 @@
-Doglar;1;4;2
-Kulan;2;1;5
-Yolken;6;3;1
-Olgot;4;2;6
-Jenny;3;5;4
-Brad;5;6;3
+Yolken;6
+Brad;5
+Kulan;2
+Olgot;3
+Jenny;4
+Doglar;1
